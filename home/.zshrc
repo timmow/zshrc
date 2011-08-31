@@ -27,5 +27,6 @@ ZSH_THEME="timmower"
 plugins=(git brew phing svn)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh_aliases
 
 # Customize to your needs...
