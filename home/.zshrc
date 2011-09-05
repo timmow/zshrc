@@ -26,7 +26,9 @@ ZSH_THEME="timmower"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew phing svn)
 
+export PERSONALDEV='/sites/personaldev/tmower/'
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
 # Customize to your needs...
+cdpath=(. /sites/personaldev/tmower) 
