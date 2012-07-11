@@ -1,4 +1,9 @@
-alias ls="ls --color"
+# replace the rubbish ls on osx systems
+if (( $+commands[gls] )) ; then
+  alias ls="gls --color"
+else
+  alias ls="ls --color"
+fi
 alias svnmod="svn st --ignore-externals | grep -v '^X'"
 alias svnconf="svn st --ignore-externals | grep -v '^X' | grep '^C'"
 alias mysql="mysql -u symfony -h cms2dbhost -p"
