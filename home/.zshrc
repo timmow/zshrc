@@ -48,3 +48,9 @@ export PATH=~/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+function extractrpm
+{
+	if [ ! -z $1 ]; then
+		rpm2cpio $1 | cpio -idmv
+	fi
+}
