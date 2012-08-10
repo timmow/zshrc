@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="timmower"
+export EDITOR=vim
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -24,11 +25,26 @@ ZSH_THEME="timmower"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew phing svn)
+plugins=(git brew phing svn screen)
 
 export PERSONALDEV='/sites/personaldev/tmower/'
+export S='svn://digital-source.bfb1.services.ipcdigital.co.uk/symfony'
+export SVN='svn://digital-source.bfb1.services.ipcdigital.co.uk/'
+export P=$PERSONALDEV/puppet
+export G='/goodtoknow-redesign'
+export W='/womanandhome-ida'
+export N='/now-redesign'
+export T='/trunk'
+export B='/branches'
+export R='/branches/releases'
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
+setopt interactive_comments
+
 # Customize to your needs...
 cdpath=(. /sites/personaldev/tmower) 
+export PATH=~/bin:$PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

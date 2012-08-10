@@ -11,7 +11,7 @@ function showhost {
 		print "%{$fg_bold[magenta]%}$REALNAME"
 	elif [[ $host =~ 'bfb$' ]] ; then
 		print "%{$fg_bold[yellow]%}$REALNAME"
-	elif [[ $host =~ 'frr$' ]] ; then
+	elif [[ $host =~ 'slo1$' ]] ; then
 		print "%{$fg_bold[red]%}$REALNAME"
 	fi
 }
