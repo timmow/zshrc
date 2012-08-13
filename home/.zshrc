@@ -25,7 +25,7 @@ export EDITOR=vim
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew phing svn screen)
+plugins=(git brew phing svn screen fasd)
 
 export PERSONALDEV='/sites/personaldev/tmower/'
 export S='svn://digital-source.bfb1.services.ipcdigital.co.uk/symfony'
