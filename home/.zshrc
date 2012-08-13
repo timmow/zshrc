@@ -37,6 +37,7 @@ export N='/now-redesign'
 export T='/trunk'
 export B='/branches'
 export R='/branches/releases'
+export PATH=/usr/local/share/python:$PATH
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
