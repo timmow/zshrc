@@ -55,3 +55,10 @@ function extractrpm
 		rpm2cpio $1 | cpio -idmv
 	fi
 }
+
+function wt
+{
+	if [ ! -z $1 ]; then
+		ssh tejon "whois $1"
+	fi
+}
