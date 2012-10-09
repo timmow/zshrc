@@ -38,6 +38,7 @@ export T='/trunk'
 export B='/branches'
 export R='/branches/releases'
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
+export CLICOLOR=1
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
@@ -72,3 +73,4 @@ eval "$(rbenv init -)"
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export PAGER=less
