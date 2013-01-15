@@ -62,3 +62,7 @@ function wt
 		ssh tejon "whois $1"
 	fi
 }
+
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
