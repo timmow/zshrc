@@ -25,7 +25,7 @@ export EDITOR=vim
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew phing svn screen fasd)
+plugins=(git brew phing svn fasd bundler rbenv)
 
 export PERSONALDEV='/sites/personaldev/tmower/'
 export S='svn://digital-source.bfb1.services.ipcdigital.co.uk/symfony'
@@ -46,9 +46,7 @@ setopt interactive_comments
 # Customize to your needs...
 cdpath=(. /sites/personaldev/tmower) 
 export PATH=~/bin:$PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 function extractrpm
 {
 	if [ ! -z $1 ]; then
