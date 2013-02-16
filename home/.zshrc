@@ -71,3 +71,4 @@ eval "$(rbenv init -)"
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
