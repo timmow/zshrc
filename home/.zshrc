@@ -37,7 +37,7 @@ export N='/now-redesign'
 export T='/trunk'
 export B='/branches'
 export R='/branches/releases'
-export PATH=/usr/local/share/python:$PATH
+export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
@@ -46,6 +46,8 @@ setopt interactive_comments
 # Customize to your needs...
 cdpath=(. /sites/personaldev/tmower) 
 export PATH=~/bin:$PATH
+
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 function extractrpm
 {
@@ -64,3 +66,8 @@ function wt
 function mcd() {
   mkdir -p "$1" && cd "$1";
 }
+eval "$(rbenv init -)"
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+fpath=($HOME/.zsh/func $fpath)
+typeset -U fpath
