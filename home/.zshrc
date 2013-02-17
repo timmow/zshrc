@@ -48,7 +48,7 @@ setopt interactive_comments
 cdpath=(. /sites/personaldev/tmower) 
 export PATH=~/bin:$PATH
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH:`npm prefix -g`/bin"
 
 function extractrpm
 {
