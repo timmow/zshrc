@@ -1,9 +1,4 @@
 # replace the rubbish ls on osx systems
-if (( $+commands[gls] )) ; then
-  alias ls="gls --color"
-else
-  alias ls="ls --color"
-fi
 alias svnmod="svn st --ignore-externals | grep -v '^X'"
 alias svnconf="svn st --ignore-externals | grep -v '^X' | grep '^C'"
 alias mysql="mysql -u symfony -h cms2dbhost -p"
@@ -20,3 +15,6 @@ alias 'svn up'='echo "use devhost 9"'
 alias 'svn sw'='echo "use devhost 9"'
 alias curla='curl -I -H '\''Pragma: akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces ,akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no'\'''
 alias http='nocorrect http'
+alias rbenv='nocorrect rbenv'
+alias vagrant='/usr/bin/vagrant'
+alias mvim='mvim --servername VIM --remote'
