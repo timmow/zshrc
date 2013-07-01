@@ -70,3 +70,4 @@ typeset -U fpath
 export PAGER=less
 mcd() { mkdir -p "$@" && cd "$_"; }
 gcd() { mkdir -p "$@" && cd "$_" && git init; }
+fpath=(/usr/local/share/zsh-completions $fpath)
