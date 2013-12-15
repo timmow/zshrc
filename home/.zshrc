@@ -18,7 +18,7 @@ export EDITOR=vim
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want disable red dots displayed while waiting for completion
 # DISABLE_COMPLETION_WAITING_DOTS="true"
@@ -37,7 +37,7 @@ export N='/now-redesign'
 export T='/trunk'
 export B='/branches'
 export R='/branches/releases'
-export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin"
+export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$(brew --prefix php53)/bin:$HOME/packer"
 export CLICOLOR=1
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
@@ -46,7 +46,6 @@ setopt interactive_comments
 
 # Customize to your needs...
 cdpath=(. /sites/personaldev/tmower) 
-
 
 function extractrpm
 {
