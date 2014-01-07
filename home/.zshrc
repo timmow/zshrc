@@ -43,6 +43,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
 setopt interactive_comments
+setopt dotglob
 
 # Customize to your needs...
 cdpath=(. /sites/personaldev/tmower) 
