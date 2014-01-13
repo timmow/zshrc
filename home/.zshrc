@@ -25,7 +25,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew phing svn screen fasd bundler rbenv vagrant)
+plugins=(git brew phing svn screen fasd bundler rbenv vagrant vi-mode)
 
 export PERSONALDEV='/sites/personaldev/tmower/'
 export S='svn://digital-source.bfb1.services.ipcdigital.co.uk/symfony'
@@ -71,3 +71,4 @@ export PAGER=less
 mcd() { mkdir -p "$@" && cd "$_"; }
 gcd() { mkdir -p "$@" && cd "$_" && git init; }
 fpath=(/usr/local/share/zsh-completions $fpath)
+bindkey -M viins 'jj' vi-cmd-mode
