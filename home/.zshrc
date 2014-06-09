@@ -72,3 +72,5 @@ typeset -U fpath
 export PAGER=less
 mcd() { mkdir -p "$@" && cd "$_"; }
 gcd() { mkdir -p "$@" && cd "$_" && git init; }
+# Ignore pyc and backup files when tab completing
+zstyle ':completion:*:(all-|)files' ignored-patterns "(*.pyc|*~)"
