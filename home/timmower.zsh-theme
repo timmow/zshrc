@@ -6,12 +6,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 function showhost {
-	host=`hostname | cut -d- -f1`
+	host=$(<~/.box_name)
+	print "%{$fg_bold[magenta]%}$host"
 	if [[ $host =~ 'bfb1$' ]] ; then
-		print "%{$fg_bold[magenta]%}$REALNAME"
-	elif [[ $host =~ 'bfb$' ]] ; then
-		print "%{$fg_bold[yellow]%}$REALNAME"
-	elif [[ $host =~ 'slo1$' ]] ; then
-		print "%{$fg_bold[red]%}$REALNAME"
+		print "%{$fg_bold[magenta]%}$host"
 	fi
 }
