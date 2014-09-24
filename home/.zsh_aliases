@@ -1,15 +1,3 @@
-# replace the rubbish ls on osx systems
-alias svnmod="svn st --ignore-externals | grep -v '^X'"
-alias svnconf="svn st --ignore-externals | grep -v '^X' | grep '^C'"
-alias mysql="mysql -u symfony -h cms2dbhost -p"
-alias gtk="cd $PERSONALDEV/goodtoknow/"
-alias gtkr="cd $PERSONALDEV/gtk-redesign/"
-alias wah="cd $PERSONALDEV/womanandhome/"
-alias wahr="cd $PERSONALDEV/womanandhome-redesign/"
-alias now="cd $PERSONALDEV/now/"
-alias teennow="cd $PERSONALDEV/teennowmagazine/"
-alias svnurl='/usr/bin/svn info | perl -nae '\''print @F[1]."\n" if $. == 2'\'''
-alias cc='./symfony cc || rm -rf cache/*'
 alias dss='dig +search +short'
 alias 'svn up'='echo "use devhost 9"'
 alias 'svn sw'='echo "use devhost 9"'
