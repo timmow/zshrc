@@ -36,7 +36,7 @@ export N='/now-redesign'
 export T='/trunk'
 export B='/branches'
 export R='/branches/releases'
-export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$(brew --prefix php53)/bin:$HOME/packer"
+export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$HOME/packer"
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 plugins=(gitfast brew phing svn fasd bundler rbenv vagrant tmux virtualenv virtualenvwrapper)
 export CLICOLOR=1
