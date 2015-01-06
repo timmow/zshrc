@@ -26,7 +26,6 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-source ~/.zshenv
 plugins=(gitfast brew phing svn fasd bundler rbenv vagrant tmux virtualenv virtualenvwrapper fabric)
 export CLICOLOR=1
 source $ZSH/oh-my-zsh.sh
