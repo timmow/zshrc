@@ -36,8 +36,8 @@ export N='/now-redesign'
 export T='/trunk'
 export B='/branches'
 export R='/branches/releases'
-export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$HOME/packer"
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$HOME/packer"
 plugins=(gitfast brew phing svn fasd bundler rbenv vagrant tmux virtualenv virtualenvwrapper fabric)
 export CLICOLOR=1
 source $ZSH/oh-my-zsh.sh
