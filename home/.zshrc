@@ -26,16 +26,6 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-export PERSONALDEV='/sites/personaldev/tmower/'
-export S='svn://digital-source.bfb1.services.ipcdigital.co.uk/symfony'
-export SVN='svn://digital-source.bfb1.services.ipcdigital.co.uk/'
-export P=$PERSONALDEV/puppet
-export G='/goodtoknow-redesign'
-export W='/womanandhome-ida'
-export N='/now-redesign'
-export T='/trunk'
-export B='/branches'
-export R='/branches/releases'
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$HOME/packer"
 plugins=(gitfast brew phing svn fasd bundler rbenv vagrant tmux virtualenv virtualenvwrapper fabric)
@@ -57,14 +47,6 @@ function extractrpm
 		rpm2cpio $1 | cpio -idmv
 	fi
 }
-
-function wt
-{
-	if [ ! -z $1 ]; then
-		ssh tejon "whois $1"
-	fi
-}
-
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 fpath=($HOME/.zsh/func $fpath)
