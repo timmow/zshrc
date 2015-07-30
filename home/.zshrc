@@ -49,7 +49,7 @@ function extractrpm
 function publish_dashboard
 {
 	if [ ! -z $1 ]; then
-		sh -c "cd ~/src/pp-deployment/fabric && ~/.virtualenvs/fabric/bin/fab production stagecraft_common.publish_dashboard:$1"
+		sh -c "cd ~/src/fabric-scripts && ~/.virtualenvs/fabric-scripts/bin/fab production performanceplatform.publish_dashboard:$1"
 	fi
 }
 
