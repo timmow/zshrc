@@ -62,3 +62,20 @@ gcd() { mkdir -p "$@" && cd "$_" && git init; }
 # Ignore pyc and backup files when tab completing
 zstyle ':completion:*:(all-|)files' ignored-patterns "(*.pyc|*~)"
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+
+GPG_AGENT=$(which gpg-agent)
+GPG_TTY=`tty`
+export GPG_TTY
+
+if [ -f ${GPG_AGENT} ]; then
+    . ~/.bash_gpg
+fi
+
+if [[ -a ~/.secrets ]]; then
+    source ~/.secrets
+fi
+export TF_VAR_AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+export TF_VAR_AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+export TF_VAR_GCE_INTEROPERABILITY_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+export TF_VAR_GCE_INTEROPERABILITY_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+export TF_VAR_GCE_INTEROPERABILITY_HOST=s3-eu-west-1.amazonaws.com
