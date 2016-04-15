@@ -12,3 +12,4 @@ alias gpoh='git push origin HEAD'
 alias hpr='hub pull-request'
 alias mkdirvirtualenv='mkvirtualenv $(basename $PWD)'
 alias 'paas-pass=PASSWORD_STORE_DIR=~/.paas-pass pass'
+alias unsafe_ssh="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null'"
