@@ -3,5 +3,6 @@ for ve in rbenv pyenv; do
         eval "$(${ve} init -)"
     fi
 done
-export PATH="~/bin:/usr/local/sbin:/usr/local/bin:$PATH:`npm prefix -g`/bin:$HOME/packer"
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export GOPATH=~/.go
+export PATH="$GOPATH/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="$PATH:`npm prefix -g`/bin"
