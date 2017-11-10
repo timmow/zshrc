@@ -84,13 +84,8 @@ gcd() { mkdir -p "$@" && cd "$_" && git init; }
 zstyle ':completion:*:(all-|)files' ignored-patterns "(*.pyc|*~)"
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
-GPG_AGENT=$(which gpg-agent)
 GPG_TTY=`tty`
 export GPG_TTY
-
-if [ -f ${GPG_AGENT} ]; then
-    . ~/.bash_gpg
-fi
 
 if [[ -a ~/.secrets ]]; then
     source ~/.secrets
