@@ -102,6 +102,11 @@ zstyle ':completion::complete:paas-pass-high::' prefix "$HOME/.paas-pass-high"
 paas-pass-high() {
   PASSWORD_STORE_DIR=$HOME/.paas-pass-high pass $@
 }
+
+function creds() {
+        $(pass aws/$1/credentials.sh) && ~/src/paas-cf/scripts/create_sts_token.sh && source ~/.aws_sts_tokens/$1.sh
+}
+
 if [[ -n $ZSH_ENABLE_PROFILE ]]; then
   # turn off tracing
   unsetopt xtrace
