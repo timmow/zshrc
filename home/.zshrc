@@ -1,3 +1,23 @@
+if [[ -n $ZSH_ENABLE_PROFILE ]]; then
+  # set the trace prompt to include seconds, nanoseconds, script name and line
+  # number
+  if zmodload zsh/datetime; then 
+    setopt promptsubst
+    PS4='+$EPOCHREALTIME %N:%i> '
+  elif [[ -n `which gdate` ]]; then
+    # GNU date is required for nanosecond precision (%N). OS X doesn't
+    # ship with that by default, so use gdate from coreutils in homebrew.
+    PS4='+$(gdate "+%s.%N") %N:%i> '
+  else
+    PS4='+$(date "+%s.%N") %N:%i> '
+  fi
+  # save file stderr to file descriptor 3 and redirect stderr (including trace
+  # output) to a file with the script's PID as an extension
+  exec 3>&2 2>/tmp/startlog.$$
+  # set options to turn on tracing and expansion of commands contained in the
+  # prompt
+  setopt xtrace prompt_subst
+fi
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 setopt no_global_rcs
@@ -92,3 +112,9 @@ zstyle ':completion::complete:paas-pass-high::' prefix "$HOME/.paas-pass-high"
 paas-pass-high() {
   PASSWORD_STORE_DIR=$HOME/.paas-pass-high pass $@
 }
+if [[ -n $ZSH_ENABLE_PROFILE ]]; then
+  # turn off tracing
+  unsetopt xtrace
+  # restore stderr to the value saved in FD 3
+  exec 2>&3 3>&-
+fi
