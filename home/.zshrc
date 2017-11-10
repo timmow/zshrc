@@ -90,11 +90,6 @@ export GPG_TTY
 if [[ -a ~/.secrets ]]; then
     source ~/.secrets
 fi
-export TF_VAR_AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-export TF_VAR_AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-export TF_VAR_GCE_INTEROPERABILITY_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-export TF_VAR_GCE_INTEROPERABILITY_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-export TF_VAR_GCE_INTEROPERABILITY_HOST=s3-eu-west-1.amazonaws.com
 
 compdef _pass paas-pass
 zstyle ':completion::complete:paas-pass::' prefix "$HOME/.paas-pass"
