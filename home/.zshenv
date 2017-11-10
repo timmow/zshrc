@@ -1,3 +1,4 @@
+setopt no_global_rcs
 for ve in rbenv pyenv; do
     if type ${ve} &> /dev/null; then
         eval "$(${ve} init -)"
