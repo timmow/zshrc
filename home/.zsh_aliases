@@ -13,3 +13,4 @@ alias hpr='hub pull-request'
 alias mkdirvirtualenv='mkvirtualenv $(basename $PWD)'
 alias unsafe_ssh="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null'"
 alias ag="ag --ignore-dir=vendor --ignore='*.tfstate'"
+alias fixssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
