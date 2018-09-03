@@ -51,7 +51,7 @@ plugins=(git brew fasd bundler vagrant tmux virtualenv virtualevnwrapper fabric)
 export CLICOLOR=1
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
-fpath=($fpath $(brew --prefix)/share/zsh-completions)
+command -v brew >/dev/null 2>&1 && fpath=($fpath $(brew --prefix)/share/zsh-completions)
 
 
 setopt interactive_comments
