@@ -14,3 +14,8 @@ alias mkdirvirtualenv='mkvirtualenv $(basename $PWD)'
 alias unsafe_ssh="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null'"
 alias ag="ag --ignore-dir=vendor --ignore='*.tfstate'"
 alias fixssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
+if type vim8 > /dev/null; then
+	alias vim=vim8
+	export VISUAL=vim8
+	export EDITOR="$VISUAL"
+fi
