@@ -109,6 +109,14 @@ function creds() {
 function update_repo() {
         (cd $1 && git pull)
 }
+# Predictable SSH authentication socket location.
+SOCK="/tmp/ssh-agent-$USER-screen"
+if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
+then
+    rm -f /tmp/ssh-agent-$USER-screen
+    ln -sf $SSH_AUTH_SOCK $SOCK
+    export SSH_AUTH_SOCK=$SOCK
+fi
 
 if [[ -n $ZSH_ENABLE_PROFILE ]]; then
   # turn off tracing
