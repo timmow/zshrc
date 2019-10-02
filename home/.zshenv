@@ -5,5 +5,5 @@ for ve in rbenv pyenv; do
     fi
 done
 export GOPATH=~/.go
-export PATH="$GOPATH/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 export PATH="$PATH:`npm prefix -g`/bin"
