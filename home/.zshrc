@@ -118,6 +118,10 @@ then
     export SSH_AUTH_SOCK=$SOCK
 fi
 
+if which aactivator >/dev/null 2>&1; then
+    eval "$(aactivator init)"
+fi
+
 if [[ -n $ZSH_ENABLE_PROFILE ]]; then
   # turn off tracing
   unsetopt xtrace
