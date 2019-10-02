@@ -110,10 +110,10 @@ function update_repo() {
         (cd $1 && git pull)
 }
 # Predictable SSH authentication socket location.
-SOCK="/tmp/ssh-agent-$USER-screen"
+SOCK="$HOME/tmp/ssh/ssh-agent-$USER-screen"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
 then
-    rm -f /tmp/ssh-agent-$USER-screen
+    rm -f $HOME/tmp/ssh/ssh-agent-$USER-screen
     ln -sf $SSH_AUTH_SOCK $SOCK
     export SSH_AUTH_SOCK=$SOCK
 fi
