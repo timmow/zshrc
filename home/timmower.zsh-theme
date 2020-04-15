@@ -15,6 +15,6 @@ function showhost {
 
 function exit {
   if [ "$?" != 0 ] ; then
-    echo -e " \xF0\x9F\x92\xA9 "
+    echo -e " X "
   fi
 }
