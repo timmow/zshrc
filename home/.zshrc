@@ -121,6 +121,7 @@ fi
 if which aactivator >/dev/null 2>&1; then
     eval "$(aactivator init)"
 fi
+typeset -aU path
 
 if [[ -n $ZSH_ENABLE_PROFILE ]]; then
   # turn off tracing
